@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '/usr/local/maven/bin/mvn -B –Dmaven.test.failure.ignore=true clean package'
+                sh '/usr/local/maven/bin/mvn  package'
             }
         }
         stage('Deploy') {
