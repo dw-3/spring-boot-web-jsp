@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'ssh  yilei.node2.com "sh /usr/local/deploy_tomcat.sh"'
+                sh 'ssh  root@yilei.node2.com "sh /usr/local/deploy_tomcat.sh"'
             }
         }
     }
