@@ -10,7 +10,7 @@ pipeline {
             agent {
                 docker { 
                 image 'tomcat' 
-                agrs '-v /usr/local/tomcat/webapps:/usr/local/tomcat/webapps'
+                args '-v /usr/local/tomcat/webapps:/usr/local/tomcat/webapps'
                        }
             }
             steps {
