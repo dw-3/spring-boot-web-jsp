@@ -13,16 +13,8 @@ pipeline {
                 agrs '-v /usr/local/tomcat/webapps:/usr/local/tomcat/webapps' 
             }
             steps {
-                sh 'cp /var/lib/jenkins/workspace/'
+                sh 'cp /var/lib/jenkins/workspace/${}/spring-boot-web-jsp-${branch}.war /usr/local/tomcat/webapps/ROOT.war'
             }
         }
-        stage('Front-end') {
-            agent {
-                docker { image 'node:7-alpine' }
-            }
-            steps {
-                sh 'node --version'
-            }
-        }
-    }
 }
+      }
