@@ -15,5 +15,6 @@ pipeline {
                 sh 'cp /var/lib/jenkins/workspace/workspace/test-pipeline/spring-boot-web-jsp-${branch}.war /usr/local/tomcat/webapps/ROOT.war'
                   }
             }
-            }
-        }
+      }
+}
+ 
