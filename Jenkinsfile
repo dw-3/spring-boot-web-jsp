@@ -1,5 +1,6 @@
 pipeline {
-    agent { node { label 'slave' } }
+    agent any
+    //agent { node { label 'slave' } }
       stages {
         stage('build') {
             steps {
@@ -14,7 +15,7 @@ pipeline {
                        }
             }
             steps {
-                sh 'cp /var/lib/jenkins/workspace/workspace/test-pipeline/spring-boot-web-jsp-${branch}.war /usr/local/tomcat/webapps/ROOT.war'
+                sh 'cp /var/lib/jenkins/workspace/test-pipeline/spring-boot-web-jsp-${branch}.war /usr/local/tomcat/webapps/ROOT.war'
                   }
             }
       }
