@@ -6,7 +6,6 @@ pipeline {
                 sh 'mvn package'
             }
         }
-    stages {
         stage('docker') {
             agent {
                 docker { image 'tomcat' }
@@ -14,7 +13,7 @@ pipeline {
             }
             steps {
                 sh 'cp /var/lib/jenkins/workspace/workspace/test-pipeline/spring-boot-web-jsp-${branch}.war /usr/local/tomcat/webapps/ROOT.war'
+                  }
+            }
             }
         }
-}
-      }
